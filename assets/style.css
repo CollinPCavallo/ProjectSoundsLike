@@ -4,16 +4,16 @@
 .buttonLeft{
    position: absolute;
    right: 25%;
-   top:50%
+   top:60%
 }
 .buttonRight{
     position: absolute;
     left:25%;
-    top: 50%;
+    top: 60%;
 }
 .btn {
     position: absolute;
-    top: 50%;
+    top: 60%;
 
 }
 body{
@@ -21,7 +21,7 @@ body{
 }
 h2{
     position: relative;
-    top: 200px;
+    top: 50px;
     color: lightgrey;
     text-align: center;
     font-size: 150px;
@@ -44,7 +44,21 @@ h2{
     opacity: 0.5;
 }
 input[type="text"]{
+
     color:white;
+
     text-align: center;
     margin: 0 auto;
+    position:absolute;
+    top:50%;
+    width:30%;
+    background-color:white;
+    color: #80cbc4;
+    font-weight: bold;
+    background: black;
+    font-variant: small-caps;
+    
+}
+.search{
+  font-size: 50px;
 }
