@@ -27,17 +27,8 @@ h2{
     font-size: 150px;
     opacity: .5;
 }
-.font1{    font-family: 'Righteous', cursive;
 
-}
-.font2{
-    font-family: 'Permanent Marker', cursive;
 
-}
-.font3{
-    font-family: 'Shrikhand', cursive;
-
-}
 .font4{
     font-family: 'Monoton', cursive;
     
@@ -50,18 +41,10 @@ h2{
     color: black;
 }
 .font4 {
-    -webkit-animation: pulsate 3s ease-out;
-    -webkit-animation-iteration-count: infinite; 
     opacity: 0.5;
 }
-@-webkit-keyframes font4 {
-    0% { 
-        opacity: 0.5;
-    }
-    50% { 
-        opacity: 1.0;
-    }
-    100% { 
-        opacity: 0.5;
-    }
+input[type="text"]{
+    color:white;
+    text-align: center;
+    margin: 0 auto;
 }
