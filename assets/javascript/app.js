@@ -45,6 +45,7 @@ $(document).ready(function () {
         e.preventDefault();
         var userInput = $("#artistInput").val()
         console.log(userInput)
+        
 
     
 
@@ -57,12 +58,32 @@ $(document).ready(function () {
         'autocorrect': 'true'
 
     }).on('success', function (payload) {
+        $("#listArtist").empty();
         console.log(payload)
+        
+        
+        for (var i = 0; i < 5; i++){
+            
+           
+            
+            var artName = payload.similarartists.artist[i].name;
+            
+            var addName = $("<p>")
+            console.log(artName)
+            
+            addName.append(artName);
+            
+            addName.addClass("artistList")
+
+            $("#listArtist").append(addName);
+
+        }
         /*YOUR CODE GOES HERE*/
     }).on('error', function (payload) {
         /*YOUR CODE GOES HERE*/
     });
     console.log(userInput)
+    $("#artistInput").text("");
     
 })
     
