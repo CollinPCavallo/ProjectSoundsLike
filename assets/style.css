@@ -1,0 +1,67 @@
+.buttonMid, .buttonLeft, .buttonRight {
+    text-align: center;
+}
+.buttonLeft{
+   position: absolute;
+   right: 25%;
+   top:50%
+}
+.buttonRight{
+    position: absolute;
+    left:25%;
+    top: 50%;
+}
+.btn {
+    position: absolute;
+    top: 50%;
+
+}
+body{
+    background: black url("../assets/images/image.jpg") no-repeat fixed center; 
+}
+h2{
+    position: relative;
+    top: 200px;
+    color: lightgrey;
+    text-align: center;
+    font-size: 150px;
+    opacity: .5;
+}
+.font1{    font-family: 'Righteous', cursive;
+
+}
+.font2{
+    font-family: 'Permanent Marker', cursive;
+
+}
+.font3{
+    font-family: 'Shrikhand', cursive;
+
+}
+.font4{
+    font-family: 'Monoton', cursive;
+    
+
+}
+.btn:hover{
+    transform: scale(1.2);
+    transition-duration: 1.2s;
+    background-color: black;
+    color: black;
+}
+.font4 {
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+@-webkit-keyframes font4 {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
