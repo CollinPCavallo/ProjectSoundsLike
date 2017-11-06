@@ -113,9 +113,11 @@ $(document).ready(function () {
 
                 artistLink.attr("href", artLinkPath);
 
+                artistLink.addClass("artInfo")
+
                 artistLink.attr("target", "blank");
 
-                artistLink.append("Check out " + artList + " here!");
+                artistLink.append("Find out more about " + artList + " here!");
 
                 $("#artist-list").attr("style", "border: 2px solid #80cbc4;")
 
@@ -153,7 +155,7 @@ $(document).ready(function () {
 
                     'entity': 'musicTrack',
 
-                    'limit': '3',
+                    'limit': '5',
 
                     'lang': 'en_us'
 
@@ -161,7 +163,7 @@ $(document).ready(function () {
 
                     console.log(musicData);
 
-                    for (var k = 0; k < 3; k++) {
+                    for (var k = 0; k < 5; k++) {
 
                         var previewUrl = musicData.results[k].previewUrl
 
