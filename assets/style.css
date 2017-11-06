@@ -1,20 +1,21 @@
 input[type="text"]{
-    
         color:white;
-    
         text-align: center;
         margin: 0 auto;
         position:absolute;
         top:50%;
         left: 35%;
         width:30%;
-        border: 0;
-    
         color: #80cbc4;
         font-weight: bold;
         font-variant: small-caps;
         
     }
+input[type="text"]:focus{
+    border: 1px solid #80cbc4;
+    background: black;
+
+}
 .buttonMid, .buttonLeft, .buttonRight {
     text-align: center;
 }
@@ -67,6 +68,7 @@ h2{
 p{
     color: white;
     font-size: 30px;
+    margin: 2px;
 }
 .resetHome{
     position: absolute;
@@ -81,8 +83,9 @@ p{
 }
 input[type=text]:not(.browser-default){
     font-size: 30px;
-    border-bottom: 0;
     width: 30%;
+    border: 1px solid #80cbc4;
+    background: black;
    
 }
 form{
@@ -92,5 +95,18 @@ form{
 #artist-list{
     background: black;
     width: 30%;
-    opacity: .6;
+    position: relative;
+    top: 20px;
+}
+#preview-player{
+    background: black;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 255px;
+    
+    
+}
+.iframeText{
+    font-size: 15px;
 }
