@@ -1,32 +1,46 @@
 $(document).ready(function () {
-    
-    
+
+
     $(".buttonLeft").click(function () {
-    
+
         $("#search").hide()
-    
+
         $("#mail").hide()
-    
+
         $("#about").hide()
 
         var createName1 = $("<h4>");
         var createName2 = $("<h4>");
         $("#infotab").attr("style", "border: 2px solid #80cbc4;")
-    
-        function createCollin () {
+
+        var resetButton = $("<button>")
+        
+                    resetButton.addClass("resetHome");
+        
+                    resetButton.attr("type", "button")
+        
+                    resetButton.html("X");
+
+                    $("#reset").append(resetButton);
+        
+                    $(".resetHome").click(function () {
+                        location.reload();
+                    })
+
+        function createCollin() {
             createName1.append("Collin")
-            
+
 
             $("#collinInfo").append(createName1)
             $("#collinInfo").append(
-                
-                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/CollinPCavallo' target ='blank'>GitHub</a>" + 
-                "<br>" + 
-                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/collin-cavallo-383720149/' target ='blank'>Linkdin</a>" + 
+
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/CollinPCavallo' target ='blank'>GitHub</a>" +
+                "<br>" +
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/collin-cavallo-383720149/' target ='blank'>Linkdin</a>" +
                 "<br>" +
                 "<img class='icons' src='https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/google_plus-square-social-media-128.png'> <a class='contact' href='https://plus.google.com/117187149984564164213' target ='blank'>Google</a>"
             )
-            
+
         }
 
         function createBrandon() {
@@ -34,10 +48,10 @@ $(document).ready(function () {
 
             $("#brandonInfo").append(createName2)
             $("#brandonInfo").append(
-                
-                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/bhoang23 target ='blank'>GitHub</a>" + 
-                "<br>" + 
-                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/brandon-hoang-2646b7128/' target ='blank'>Linkdin</a>" + 
+
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/bhoang23' target ='blank'>GitHub</a>" +
+                "<br>" +
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/brandon-hoang-2646b7128/' target ='blank'>Linkdin</a>" +
                 "<br>" +
                 "<img class='icons' src='https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/google_plus-square-social-media-128.png'> <a class='contact' href='https://plus.google.com/103907679503488296065' target ='blank'>Google</a>"
             )
@@ -45,30 +59,44 @@ $(document).ready(function () {
 
         createCollin();
         createBrandon();
-       
+
 
 
     })
-    
+
     $(".buttonRight").click(function () {
 
-        
-    
+
+
         $("#search").hide()
-    
+
         $("#mail").hide()
-    
+
         $("#about").hide()
-    
-        
+
+
 
         var aboutUs = $("<h4>");
         var bioAbout = $("<p>");
-        var collinPic= $("<img>");
-        var brandonPic= $("<img>");
+        var collinPic = $("<img>");
+        var brandonPic = $("<img>");
         $("#ourBio").attr("style", "border: 2px solid #80cbc4");
 
-        function createAboutUs(){
+        var resetButton = $("<button>")
+        
+                    resetButton.addClass("resetHome");
+        
+                    resetButton.attr("type", "button")
+        
+                    resetButton.html("X");
+
+                    $("#reset").append(resetButton);
+        
+                    $(".resetHome").click(function () {
+                        location.reload();
+                    })
+
+        function createAboutUs() {
             aboutUs.append("About Us")
             bioAbout.append("blah blah blah blah blah blah blah blah")
             collinPic.attr("src", "https://pbs.twimg.com/profile_images/876906909537714178/pdwQ2Sxz.jpg")
@@ -76,19 +104,20 @@ $(document).ready(function () {
 
             collinPic.addClass("profilePic")
             brandonPic.addClass("profilePic")
-            
+
 
             $("#aboutBio").append(aboutUs)
             $("#bioUs").append(bioAbout)
             $("#ourBio").append(collinPic)
             $("#ourBio").append(brandonPic)
-            
+
+
 
         }
 
         createAboutUs();
     })
-    
+
     $(".buttonMid").click(function () {
 
         $("#search").hide()
@@ -128,6 +157,9 @@ $(document).ready(function () {
         $("#searchForm").append(submitBtn);
 
         $("#reset").append(resetButton);
+        $(".resetHome").click(function () {
+            location.reload();
+        })
 
     })
 
@@ -269,8 +301,8 @@ $(document).ready(function () {
                         createDiv.append(createPlayer)
 
                         $(this).append(createDiv)
-                        
-                        $(".artistName").click(function(){
+
+                        $(".artistName").click(function () {
 
                             $("#preview-player").html("");
 
