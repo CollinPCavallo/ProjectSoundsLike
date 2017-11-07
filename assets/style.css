@@ -62,3 +62,7 @@ input[type="text"]{
 .search{
   font-size: 50px;
 }
+
+#subButn{
+    visibility: hidden;
+}
