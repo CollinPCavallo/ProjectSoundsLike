@@ -140,8 +140,36 @@ form{
     transform: scale(1.1);
     color:#80cbc4;
 }
+
+
+#subButn{
+    visibility: hidden;
+}
+=======
 #subButn{
     display: none;
+
+
+}
+#aboutBio{
+    text-decoration: underline;
+}
+#ourBio{
+    background: black;
+    color: white;
+    position: relative;
+    top: 55%;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px color: #80cbc4;
+    
+}
+.profilePic{
+    width: 200px;
+    height: 200px;
+
+
 }
 h4{
     color: white;
@@ -175,3 +203,4 @@ a{
     top: 15px;
     margin-bottom: 5px;
 }
+

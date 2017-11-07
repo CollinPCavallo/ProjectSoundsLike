@@ -51,6 +51,8 @@ $(document).ready(function () {
     })
     
     $(".buttonRight").click(function () {
+
+        
     
         $("#search").hide()
     
@@ -60,6 +62,31 @@ $(document).ready(function () {
     
         
 
+        var aboutUs = $("<h4>");
+        var bioAbout = $("<p>");
+        var collinPic= $("<img>");
+        var brandonPic= $("<img>");
+        $("#ourBio").attr("style", "border: 2px solid #80cbc4");
+
+        function createAboutUs(){
+            aboutUs.append("About Us")
+            bioAbout.append("blah blah blah blah blah blah blah blah")
+            collinPic.attr("src", "https://pbs.twimg.com/profile_images/876906909537714178/pdwQ2Sxz.jpg")
+            brandonPic.attr("src", "https://www.allkpop.com/upload/2016/06/af_org/G-Dragon_1467158254_af_org.jpg")
+
+            collinPic.addClass("profilePic")
+            brandonPic.addClass("profilePic")
+            
+
+            $("#aboutBio").append(aboutUs)
+            $("#bioUs").append(bioAbout)
+            $("#ourBio").append(collinPic)
+            $("#ourBio").append(brandonPic)
+            
+
+        }
+
+        createAboutUs();
     })
     
     $(".buttonMid").click(function () {
