@@ -102,6 +102,11 @@ form{
     top: 20px;
     text-align: center;
     border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.artInfo{
+    font-size: 15px;
 }
 #preview-player{
     background: black;
@@ -113,6 +118,13 @@ form{
     
     
     
+}
+#artSongs, .artistName{
+    border-bottom: 2px solid #80cbc4;
+    width: 35%;
+    margin: 0 auto;
+    font-weight: bold;
+
 }
 .iframeText{
     font-size: 15px;
@@ -137,6 +149,7 @@ form{
 #subButn{
     display: none;
 
+
 }
 #aboutBio{
     text-decoration: underline;
@@ -155,4 +168,39 @@ form{
 .profilePic{
     width: 200px;
     height: 200px;
+
+
 }
+h4{
+    color: white;
+    border-bottom: 2px solid #80cbc4;
+    width: 35%;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+#infotab{
+    position: relative;
+    top: 20px;
+    background: black;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 15px;
+} 
+.contact{
+    color: #80cbc4;
+    line-height: 40px;
+    
+}
+a{
+    margin: 5px 0px; 
+}
+.icons{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 15px;
+    margin-bottom: 5px;
+}
+

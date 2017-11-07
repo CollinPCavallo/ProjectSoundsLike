@@ -1,5 +1,6 @@
 $(document).ready(function () {
     
+    
     $(".buttonLeft").click(function () {
     
         $("#search").hide()
@@ -7,8 +8,45 @@ $(document).ready(function () {
         $("#mail").hide()
     
         $("#about").hide()
+
+        var createName1 = $("<h4>");
+        var createName2 = $("<h4>");
+        $("#infotab").attr("style", "border: 2px solid #80cbc4;")
     
-        console.log("Search Clikced")
+        function createCollin () {
+            createName1.append("Collin")
+            
+
+            $("#collinInfo").append(createName1)
+            $("#collinInfo").append(
+                
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/CollinPCavallo' target ='blank'>GitHub</a>" + 
+                "<br>" + 
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/collin-cavallo-383720149/' target ='blank'>Linkdin</a>" + 
+                "<br>" +
+                "<img class='icons' src='https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/google_plus-square-social-media-128.png'> <a class='contact' href='https://plus.google.com/117187149984564164213' target ='blank'>Google</a>"
+            )
+            
+        }
+
+        function createBrandon() {
+            createName2.append("Brandon")
+
+            $("#brandonInfo").append(createName2)
+            $("#brandonInfo").append(
+                
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/bhoang23 target ='blank'>GitHub</a>" + 
+                "<br>" + 
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/brandon-hoang-2646b7128/' target ='blank'>Linkdin</a>" + 
+                "<br>" +
+                "<img class='icons' src='https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/google_plus-square-social-media-128.png'> <a class='contact' href='https://plus.google.com/103907679503488296065' target ='blank'>Google</a>"
+            )
+        }
+
+        createCollin();
+        createBrandon();
+       
+
 
     })
     
@@ -22,7 +60,7 @@ $(document).ready(function () {
     
         $("#about").hide()
     
-        console.log("Search Clikced")
+        
 
         var aboutUs = $("<h4>");
         var bioAbout = $("<p>");
@@ -168,7 +206,9 @@ $(document).ready(function () {
 
                 var dispName = $("<p>")
 
+                dispName.attr("id", "artSongs")
                 dispName.append(iTunesSearch)
+
 
                 $("#preview-player").append(dispName);
 
