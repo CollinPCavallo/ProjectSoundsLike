@@ -1,3 +1,25 @@
+input[type="text"]{
+        color:white;
+        text-align: center;
+        margin: 0 auto;
+        position:absolute;
+        top:50%;
+        left: 35%;
+        width:30%;
+        color: #80cbc4;
+        font-weight: bold;
+        font-variant: small-caps;
+        transition: all .3s ease-in-out;
+        
+    }
+input[type="text"]:focus{
+    transition: all .3s ease-in-out;
+    border: 1px solid #80cbc4;
+    background: black;
+    border-radius: 15px;
+    transform: scale(1,1);
+
+}
 .buttonMid, .buttonLeft, .buttonRight {
     text-align: center;
 }
@@ -22,15 +44,16 @@ body{
 h2{
     position: relative;
     top: 50px;
-    color: lightgrey;
+    color:lightgray;
     text-align: center;
     font-size: 150px;
-    opacity: .5;
+    text-shadow: 0px 0px 7px #80cbc4;
 }
 
 
 .font4{
     font-family: 'Monoton', cursive;
+    opacity: .7;
     
 
 }
@@ -40,29 +63,78 @@ h2{
     background-color: black;
     color: black;
 }
-.font4 {
-    opacity: 0.5;
-}
-input[type="text"]{
 
-    color:white;
 
-    text-align: center;
-    margin: 0 auto;
-    position:absolute;
-    top:50%;
-    width:30%;
-    background-color:white;
-    color: #80cbc4;
-    font-weight: bold;
-    background: black;
-    font-variant: small-caps;
-    
-}
 .search{
   font-size: 50px;
 }
+p{
+    color: white;
+    font-size: 30px;
+    margin: 2px;
+}
+.resetHome{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: transparent;
+    font: inherit;
+    font-weight: 500;
+    border: 0;
+    color: white;
+    font-size: 30px;
+}
+input[type=text]:not(.browser-default){
+    font-size: 30px;
+    width: 30%;
+    border: 1px solid #80cbc4;
+    background: black;
+   
+}
+form{
+    text-align: center;
+    margin: 0 auto;
+}
+#artist-list{
+    background: black;
+    width: 30%;
+    position: relative;
+    top: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+#preview-player{
+    background: black;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 255px;
+    border-radius: 15px;
+    
+    
+    
+}
+.iframeText{
+    font-size: 15px;
+}
+.info{
+    font-size: 10px;
+}
+.artistName, #preview-player{
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+.artistName:hover{
+    transform: scale(1.1);
+    color:#80cbc4;
+}
+<<<<<<< HEAD
 
 #subButn{
     visibility: hidden;
 }
+=======
+#subButn{
+    display: none;
+}
+>>>>>>> 44fb5139202bc35b135e1ec5f421c66fb8e90172
