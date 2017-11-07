@@ -128,7 +128,7 @@ form{
     transform: scale(1.1);
     color:#80cbc4;
 }
-<<<<<<< HEAD
+
 
 #subButn{
     visibility: hidden;
@@ -136,5 +136,23 @@ form{
 =======
 #subButn{
     display: none;
+
 }
->>>>>>> 44fb5139202bc35b135e1ec5f421c66fb8e90172
+#aboutBio{
+    text-decoration: underline;
+}
+#ourBio{
+    background: black;
+    color: white;
+    position: relative;
+    top: 55%;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px color: #80cbc4;
+    
+}
+.profilePic{
+    width: 200px;
+    height: 200px;
+}
