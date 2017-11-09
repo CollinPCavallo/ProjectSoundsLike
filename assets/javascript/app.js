@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
 
 
     $(".buttonLeft").click(function () {
@@ -13,19 +14,22 @@ $(document).ready(function () {
         var createName2 = $("<h4>");
         $("#infotab").attr("style", "border: 2px solid #80cbc4;")
 
-        var resetButton = $("<button>")
-        
-                    resetButton.addClass("resetHome");
-        
-                    resetButton.attr("type", "button")
-        
-                    resetButton.html("X");
+        var resetButton = $("<button>");
 
-                    $("#reset").append(resetButton);
-        
-                    $(".resetHome").click(function () {
-                        location.reload();
-                    })
+        resetButton.addClass("resetHome");
+
+        resetButton.attr("type", "button");
+
+        resetButton.attr("id","reset");
+
+        resetButton.html("X");
+
+        $("#reset").append(resetButton);
+
+       
+        $(".resetHome").click(function () {
+            location.reload();
+        })
 
         function createCollin() {
             createName1.append("Collin")
@@ -83,22 +87,23 @@ $(document).ready(function () {
         $("#ourBio").attr("style", "border: 2px solid #80cbc4");
 
         var resetButton = $("<button>")
-        
-                    resetButton.addClass("resetHome");
-        
-                    resetButton.attr("type", "button")
-        
-                    resetButton.html("X");
 
-                    $("#reset").append(resetButton);
-        
-                    $(".resetHome").click(function () {
-                        location.reload();
-                    })
+        resetButton.addClass("resetHome");
+
+        resetButton.attr("type", "button")
+
+        resetButton.html("X");
+
+        $("#reset").append(resetButton);
+
+        $(".resetHome").click(function () {
+            location.reload();
+        })
 
         function createAboutUs() {
             aboutUs.append("About Us")
-            bioAbout.append("blah blah blah blah blah blah blah blah")
+            bioAbout.attr("id", "usBio")
+            bioAbout.append("Collin and Brandon are two sexy web developers who know how to get a job done. They spend countless ours working on thier crafts. With every new project comes a new challenge. No job is too big no problem is too small, all while looking good. In the words of the great Justin Timberlake <br> 'Im bringing sexy back, YEAH'")
             collinPic.attr("src", "https://pbs.twimg.com/profile_images/876906909537714178/pdwQ2Sxz.jpg")
             brandonPic.attr("src", "https://www.allkpop.com/upload/2016/06/af_org/G-Dragon_1467158254_af_org.jpg")
 
@@ -128,42 +133,59 @@ $(document).ready(function () {
 
         console.log("Search Clikced")
 
-        var searchBar = $("<input>")
+        var searchBar = $("<input>");
 
-        var submitBtn = $("<button>")
+        var submitBtn = $("<button>");
 
-        var resetButton = $("<button>")
+        var resetButton = $("<button>");
 
         resetButton.addClass("resetHome");
 
-        resetButton.attr("type", "button")
+        resetButton.attr("type", "button");
 
         resetButton.html("X");
 
         searchBar.addClass("search");
 
-        searchBar.attr("type", "text")
+        searchBar.attr("type", "text");
 
-        searchBar.attr("id", "artistInput")
+        searchBar.attr("id", "artistInput");
 
-        searchBar.attr("placeholder", "Artist Name")
+        searchBar.attr("placeholder", "Artist Name");
 
-        submitBtn.attr("id", "subButn")
+        submitBtn.attr("id", "subButn");
 
-        submitBtn.attr("type", "submit")
+        submitBtn.attr("type", "submit");
 
         $("#searchForm").append(searchBar);
 
         $("#searchForm").append(submitBtn);
 
         $("#reset").append(resetButton);
+      
         $(".resetHome").click(function () {
+            
             location.reload();
+        
         })
 
     })
 
     $("#searchForm").submit(function (e) {
+
+        if ($("#artistInput").val() === ""){
+            e.preventDefault();
+            $("#modal1").modal()
+            
+            $("#artistInput").attr("placeholder", "Search Again")
+
+            
+            
+
+        }
+        else {
+
+        
 
         e.preventDefault();
 
@@ -218,7 +240,7 @@ $(document).ready(function () {
 
                 $("#artist-list").attr("style", "border: 2px solid #80cbc4;")
 
-                $("#artistInput").attr("placeholder", "Search Again");
+                $("#artistInput").attr("placeholder", "<--Check these guys out!");
 
                 $("#artist-list").append(createName);
 
@@ -318,7 +340,8 @@ $(document).ready(function () {
         }).on('error', function (payload) {
             /*YOUR CODE GOES HERE*/
         });
-
+    }
     })
+
 
 })

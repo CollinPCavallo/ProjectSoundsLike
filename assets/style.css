@@ -83,6 +83,17 @@ p{
     border: 0;
     color: white;
     font-size: 30px;
+    transition-duration: .2s;
+}
+.resetHome:hover{
+    color: #80cbc4;
+    transform: scale(1.2);
+
+}
+.resetHome:active{
+    color: #5e948f;
+    transform: scale(1,.5)
+    
 }
 input[type=text]:not(.browser-default){
     font-size: 30px;
@@ -145,20 +156,17 @@ form{
 #subButn{
     visibility: hidden;
 }
-=======
+
 #subButn{
     display: none;
 
 
 }
-#aboutBio{
-    text-decoration: underline;
-}
 #ourBio{
     background: black;
     color: white;
     position: relative;
-    top: 55%;
+    top: 20px;;
     width: 50%;
     margin: 0 auto;
     text-align: center;
@@ -202,5 +210,21 @@ a{
     position: relative;
     top: 15px;
     margin-bottom: 5px;
+}
+#usBio{
+    font-size: 20px;
+}
+#modalDiv{
+ text-align: center
+}
+#modalText1, #modalText2{
+    text-align: center;
+    color: black;
+}
+.modal a.close-modal{
+    background-image: url("../assets/Images/button.png");
+    position: absolute;
+    top: -3.5px;
+    right: 1.5px;
 }
 
