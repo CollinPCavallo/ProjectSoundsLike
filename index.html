@@ -5,12 +5,15 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <script src="assets/javascript/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
 
     <link href="https://fonts.googleapis.com/css?family=Monoton|Permanent+Marker|Righteous|Shrikhand" rel="stylesheet">
@@ -28,23 +31,25 @@
 
 
     </form>
+    <div id="modalDiv">
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4 id="modalText1">BAD SEARCH!</h4>
+              <p id="modalText2">Please close this window and try a new search!</p>
+            </div>
+          </div>
+    </div>
 
     <!-- <h2 class="font1">SoundsLike</h2>
     <h2 class="font2">SoundsLike</h2>
     <h2 class="font3">SoundsLike</h2> -->
     <h2 class="font4 ">SoundsLike</h2>
 
-<div id="ourBio">
-    <div id="aboutBio"></div>
-    <div id="bioUs"></div>
-</div>   
-
     <div id="infotab">
-    <div id="collinInfo"></div>
+        <div id="collinInfo"></div>
 
-    <div id="brandonInfo"></div>
+        <div id="brandonInfo"></div>
     </div>
-
 
     <div class="buttonLeft">
         <a id="mail" class="btn btn-floating btn-large teal lighten-3 pulse">

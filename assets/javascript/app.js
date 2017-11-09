@@ -1,32 +1,50 @@
 $(document).ready(function () {
     
-    
+
+
     $(".buttonLeft").click(function () {
-    
+
         $("#search").hide()
-    
+
         $("#mail").hide()
-    
+
         $("#about").hide()
 
         var createName1 = $("<h4>");
         var createName2 = $("<h4>");
         $("#infotab").attr("style", "border: 2px solid #80cbc4;")
-    
-        function createCollin () {
+
+        var resetButton = $("<button>");
+
+        resetButton.addClass("resetHome");
+
+        resetButton.attr("type", "button");
+
+        resetButton.attr("id","reset");
+
+        resetButton.html("X");
+
+        $("#reset").append(resetButton);
+
+       
+        $(".resetHome").click(function () {
+            location.reload();
+        })
+
+        function createCollin() {
             createName1.append("Collin")
-            
+
 
             $("#collinInfo").append(createName1)
             $("#collinInfo").append(
-                
-                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/CollinPCavallo' target ='blank'>GitHub</a>" + 
-                "<br>" + 
-                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/collin-cavallo-383720149/' target ='blank'>Linkdin</a>" + 
+
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/CollinPCavallo' target ='blank'>GitHub</a>" +
+                "<br>" +
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/collin-cavallo-383720149/' target ='blank'>Linkdin</a>" +
                 "<br>" +
                 "<img class='icons' src='https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/google_plus-square-social-media-128.png'> <a class='contact' href='https://plus.google.com/117187149984564164213' target ='blank'>Google</a>"
             )
-            
+
         }
 
         function createBrandon() {
@@ -34,10 +52,10 @@ $(document).ready(function () {
 
             $("#brandonInfo").append(createName2)
             $("#brandonInfo").append(
-                
-                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/bhoang23 target ='blank'>GitHub</a>" + 
-                "<br>" + 
-                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/brandon-hoang-2646b7128/' target ='blank'>Linkdin</a>" + 
+
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_square_gray-128.png'> <a class='contact' href='https://github.com/bhoang23' target ='blank'>GitHub</a>" +
+                "<br>" +
+                "<img class='icons' src='https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_gray-128.png'> <a class='contact' href='https://www.linkedin.com/in/brandon-hoang-2646b7128/' target ='blank'>Linkdin</a>" +
                 "<br>" +
                 "<img class='icons' src='https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/google_plus-square-social-media-128.png'> <a class='contact' href='https://plus.google.com/103907679503488296065' target ='blank'>Google</a>"
             )
@@ -45,50 +63,66 @@ $(document).ready(function () {
 
         createCollin();
         createBrandon();
-       
+
 
 
     })
-    
+
     $(".buttonRight").click(function () {
 
-        
-    
+
+
         $("#search").hide()
-    
+
         $("#mail").hide()
-    
+
         $("#about").hide()
-    
-        
+
+
 
         var aboutUs = $("<h4>");
         var bioAbout = $("<p>");
-        var collinPic= $("<img>");
-        var brandonPic= $("<img>");
+        var collinPic = $("<img>");
+        var brandonPic = $("<img>");
         $("#ourBio").attr("style", "border: 2px solid #80cbc4");
 
-        function createAboutUs(){
+        var resetButton = $("<button>")
+
+        resetButton.addClass("resetHome");
+
+        resetButton.attr("type", "button")
+
+        resetButton.html("X");
+
+        $("#reset").append(resetButton);
+
+        $(".resetHome").click(function () {
+            location.reload();
+        })
+
+        function createAboutUs() {
             aboutUs.append("About Us")
-            bioAbout.append("blah blah blah blah blah blah blah blah")
+            bioAbout.attr("id", "usBio")
+            bioAbout.append("Collin and Brandon are two sexy web developers who know how to get a job done. They spend countless ours working on thier crafts. With every new project comes a new challenge. No job is too big no problem is too small, all while looking good. In the words of the great Justin Timberlake <br> 'Im bringing sexy back, YEAH'")
             collinPic.attr("src", "https://pbs.twimg.com/profile_images/876906909537714178/pdwQ2Sxz.jpg")
             brandonPic.attr("src", "https://www.allkpop.com/upload/2016/06/af_org/G-Dragon_1467158254_af_org.jpg")
 
             collinPic.addClass("profilePic")
             brandonPic.addClass("profilePic")
-            
+
 
             $("#aboutBio").append(aboutUs)
             $("#bioUs").append(bioAbout)
             $("#ourBio").append(collinPic)
             $("#ourBio").append(brandonPic)
-            
+
+
 
         }
 
         createAboutUs();
     })
-    
+
     $(".buttonMid").click(function () {
 
         $("#search").hide()
@@ -99,39 +133,59 @@ $(document).ready(function () {
 
         console.log("Search Clikced")
 
-        var searchBar = $("<input>")
+        var searchBar = $("<input>");
 
-        var submitBtn = $("<button>")
+        var submitBtn = $("<button>");
 
-        var resetButton = $("<button>")
+        var resetButton = $("<button>");
 
         resetButton.addClass("resetHome");
 
-        resetButton.attr("type", "button")
+        resetButton.attr("type", "button");
 
         resetButton.html("X");
 
         searchBar.addClass("search");
 
-        searchBar.attr("type", "text")
+        searchBar.attr("type", "text");
 
-        searchBar.attr("id", "artistInput")
+        searchBar.attr("id", "artistInput");
 
-        searchBar.attr("placeholder", "Artist Name")
+        searchBar.attr("placeholder", "Artist Name");
 
-        submitBtn.attr("id", "subButn")
+        submitBtn.attr("id", "subButn");
 
-        submitBtn.attr("type", "submit")
+        submitBtn.attr("type", "submit");
 
         $("#searchForm").append(searchBar);
 
         $("#searchForm").append(submitBtn);
 
         $("#reset").append(resetButton);
+      
+        $(".resetHome").click(function () {
+            
+            location.reload();
+        
+        })
 
     })
 
     $("#searchForm").submit(function (e) {
+
+        if ($("#artistInput").val() === ""){
+            e.preventDefault();
+            $("#modal1").modal()
+            
+            $("#artistInput").attr("placeholder", "Search Again")
+
+            
+            
+
+        }
+        else {
+
+        
 
         e.preventDefault();
 
@@ -186,7 +240,7 @@ $(document).ready(function () {
 
                 $("#artist-list").attr("style", "border: 2px solid #80cbc4;")
 
-                $("#artistInput").attr("placeholder", "Search Again");
+                $("#artistInput").attr("placeholder", "<--Check these guys out!");
 
                 $("#artist-list").append(createName);
 
@@ -269,8 +323,8 @@ $(document).ready(function () {
                         createDiv.append(createPlayer)
 
                         $(this).append(createDiv)
-                        
-                        $(".artistName").click(function(){
+
+                        $(".artistName").click(function () {
 
                             $("#preview-player").html("");
 
@@ -286,7 +340,8 @@ $(document).ready(function () {
         }).on('error', function (payload) {
             /*YOUR CODE GOES HERE*/
         });
-
+    }
     })
+
 
 })
