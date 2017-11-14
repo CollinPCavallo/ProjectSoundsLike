@@ -1,9 +1,9 @@
 $(document).ready(function () {
     
 
-
+//this is the function to run when you click on the contact button on the main page
     $(".buttonLeft").click(function () {
-
+//this will hide the three buttons from the site allowing the content to take up the page
         $("#search").hide()
 
         $("#mail").hide()
@@ -11,9 +11,11 @@ $(document).ready(function () {
         $("#about").hide()
 
         var createName1 = $("<h4>");
+        
         var createName2 = $("<h4>");
+        // We used jquery style here because it would add the border to the div that is on the html showing random lines, this makes it so the border doesnt show until the content is loaded
         $("#infotab").attr("style", "border: 2px solid #80cbc4;")
-
+//this is our reset button or "go home button" to refresh the page and reload the buttons
         var resetButton = $("<button>");
 
         resetButton.addClass("resetHome");
@@ -34,7 +36,7 @@ $(document).ready(function () {
         function createCollin() {
             createName1.append("Collin")
 
-
+//we made everything dynamic with this web page, the icons, the text everything that shows on each page is dynamic
             $("#collinInfo").append(createName1)
             $("#collinInfo").append(
 
@@ -67,7 +69,7 @@ $(document).ready(function () {
 
 
     })
-
+//on click funciton for the about us page
     $(".buttonRight").click(function () {
 
 
@@ -122,7 +124,7 @@ $(document).ready(function () {
 
         createAboutUs();
     })
-
+//The on click for the middle/ Search Button
     $(".buttonMid").click(function () {
 
         $("#search").hide()
@@ -170,12 +172,14 @@ $(document).ready(function () {
         })
 
     })
-
+//this is our user validation modal, if the user doesnt enter an artists name, the modal will pop up and tell them to try again
     $("#searchForm").submit(function (e) {
 
         if ($("#artistInput").val() === ""){
             e.preventDefault();
-            $("#modal1").modal()
+            $("#modal1").modal({
+                fadeDuration: 200
+              });
             
             $("#artistInput").attr("placeholder", "Search Again")
 
@@ -188,16 +192,16 @@ $(document).ready(function () {
         
 
         e.preventDefault();
-
+//stores the user input in to a variable to be called on later
         var userInput = $("#artistInput").val()
 
         console.log(userInput)
-
+//this will clear the artist list on the left and the songs on the right everytime a new artist is searched
         $("#artist-list").empty();
         $("#preview-player").empty();
 
         $("#artistInput").val("");
-
+//ajax call for Lastfm's api to grab similar artist to whatever the user input is.
         var rapid = new RapidAPI("default-application_59fbc461e4b06d2e9b6cef94", "e938f07c-2598-49e9-adbf-79f15a8f44d0");
 
         rapid.call('LastFM', 'getSimilarArtists', {
@@ -209,11 +213,11 @@ $(document).ready(function () {
             'limit': '5',
 
             'autocorrect': 'true'
-
+//this is the on sucess function to run if the api call was successful.
         }).on('success', function (payload) {
 
             console.log(payload)
-
+//runs a for loop for 5 objects on the JSON object (payload), and creates elements to be written to the DOM.
             for (var i = 0; i < 5; i++) {
 
                 var artList = payload.similarartists.artist[i].name
@@ -251,7 +255,7 @@ $(document).ready(function () {
 
 
             }
-
+//when the 5 similar artist are written to the DOM we made them clickable to pull up songs using ITUNES api, to grab previes of the top 5 songs by the artist.
             $(".artistName").click(function () {
 
                 var iTunesSearch = $(this).attr("newName");
@@ -279,7 +283,7 @@ $(document).ready(function () {
                     'limit': '5',
 
                     'lang': 'en_us'
-
+//this is Pulling the preview url and placing it inside the track name so we can call on it to pull up an Iframe tag to play the song.
                 }).on('success', function (musicData) {
 
                     console.log(musicData);
