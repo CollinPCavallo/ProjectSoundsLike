@@ -39,7 +39,7 @@ input[type="text"]:focus{
 
 }
 body{
-    background: black url("../assets/images/image.jpg") no-repeat fixed center; 
+    background: black url("../assets/Images/image.jpg") no-repeat fixed center; 
 }
 h2{
     position: relative;
